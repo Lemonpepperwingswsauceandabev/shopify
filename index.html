@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IcePossible - Shopify Inventory Management</title>
+    <title>IcePossible - Streetwear & Stickers</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .feature-card { transition: all 0.3s ease; }
-        .feature-card:hover { transform: translateY(-5px); }
+        .gradient-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%); }
+        .ice-text { 
+            background: linear-gradient(135deg, #60a5fa, #3b82f6, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hover-lift { transition: transform 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm border-b">
+    <nav class="bg-white shadow-sm border-b sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-gray-900">IcePossible</h1>
-                    </div>
+                    <a href="#" class="text-2xl font-black ice-text">IcePossible</a>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <a href="#features" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
-                    <a href="#pricing" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
-                    <button onclick="goToApp()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                        Get Started
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Home</a>
+                    <a href="#shop" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">Shop</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">About</a>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition-colors">
+                        Cart (0)
                     </button>
                 </div>
             </div>
@@ -35,269 +40,148 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-20">
+    <section id="home" class="gradient-bg text-white py-20 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                    Streamline Your<br>
-                    <span class="text-yellow-300">Shopify Inventory</span>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    <span class="block">ICE</span>
+                    <span class="block text-yellow-300">POSSIBLE</span>
                 </h1>
                 <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                    Take control of your inventory management with powerful tools designed specifically for Shopify merchants. Track, manage, and optimize your stock levels effortlessly.
+                    Fresh streetwear and stickers that make the impossible, possible. 
+                    Express yourself with our unique designs.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="goToApp()" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-                        Start Free Trial
-                    </button>
-                    <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                        Watch Demo
+                    <a href="#shop" class="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                        Shop Now
+                    </a>
+                    <button class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
+                        Learn More
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
+    <!-- Shop Section -->
+    <section id="shop" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to manage your Shopify inventory like a pro</p>
+                <h2 class="text-4xl font-black text-gray-900 mb-4">Shop</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Check out our latest drops and exclusive designs</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
+            <!-- Featured Product -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover-lift">
+                    <div class="grid md:grid-cols-2 gap-8 p-8">
+                        <!-- Product Image -->
+                        <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
+                                    <span class="text-4xl">🧊</span>
+                                </div>
+                                <div class="text-blue-600 font-bold text-lg">Sticker Pack Preview</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Product Details -->
+                        <div class="flex flex-col justify-center">
+                            <div class="mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-sm font-semibold px-3 py-1 rounded-full">New Drop</span>
+                            </div>
+                            <h3 class="text-3xl font-black text-gray-900 mb-4">Sticker Pack #1 - ICEy Friends</h3>
+                            <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                                Our first exclusive sticker pack featuring cool, icy characters and streetwear-inspired designs. 
+                                Perfect for laptops, water bottles, and anywhere you want to show your style.
+                            </p>
+                            
+                            <!-- Features -->
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-gray-700">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Waterproof & fade-resistant
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Pack of 8 unique designs
+                                </li>
+                                <li class="flex items-center text-gray-700">
+                                    <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    Premium vinyl material
+                                </li>
+                            </ul>
+                            
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="text-3xl font-black text-gray-900">$12.99</div>
+                                <div class="text-sm text-gray-500">Free shipping over $25</div>
+                            </div>
+                            
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-bold transition-colors shadow-lg w-full">
+                                Add to Cart
+                            </button>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Real-time Tracking</h3>
-                    <p class="text-gray-600">Monitor your inventory levels in real-time with automatic updates and instant notifications when stock runs low.</p>
                 </div>
-
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Smart Automation</h3>
-                    <p class="text-gray-600">Automate reordering, stock alerts, and inventory updates to save time and prevent stockouts.</p>
-                </div>
-
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Easy Integration</h3>
-                    <p class="text-gray-600">Seamlessly integrates with your existing Shopify store with one-click installation and setup.</p>
-                </div>
-
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Advanced Analytics</h3>
-                    <p class="text-gray-600">Get detailed insights into your inventory performance with comprehensive reports and analytics.</p>
-                </div>
-
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Cost Optimization</h3>
-                    <p class="text-gray-600">Optimize your inventory costs with smart forecasting and demand prediction algorithms.</p>
-                </div>
-
-                <div class="feature-card bg-gray-50 p-8 rounded-xl">
-                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">24/7 Support</h3>
-                    <p class="text-gray-600">Get help whenever you need it with our dedicated support team available around the clock.</p>
-                </div>
+            </div>
+            
+            <!-- Coming Soon -->
+            <div class="text-center mt-16">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">More Drops Coming Soon</h3>
+                <p class="text-gray-600 mb-6">Stay tuned for apparel, accessories, and more exclusive sticker packs</p>
+                <button class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full font-semibold transition-colors">
+                    Join Waitlist
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple Pricing</h2>
-                <p class="text-xl text-gray-600">Choose the plan that fits your business needs</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-xl shadow-sm border">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-gray-900">$9</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Up to 100 products
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Basic analytics
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Email support
-                        </li>
-                    </ul>
-                    <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                        Get Started
-                    </button>
-                </div>
-
-                <div class="bg-blue-600 text-white p-8 rounded-xl shadow-lg transform scale-105">
-                    <div class="text-center mb-4">
-                        <span class="bg-yellow-400 text-blue-900 px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Professional</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold">$29</span>
-                        <span class="text-blue-200">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Up to 1,000 products
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Advanced analytics
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Priority support
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-yellow-400 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Automation features
-                        </li>
-                    </ul>
-                    <button onclick="goToApp()" class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Start Free Trial
-                    </button>
-                </div>
-
-                <div class="bg-white p-8 rounded-xl shadow-sm border">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                    <div class="mb-6">
-                        <span class="text-4xl font-bold text-gray-900">$99</span>
-                        <span class="text-gray-600">/month</span>
-                    </div>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Unlimited products
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Custom integrations
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            Dedicated support
-                        </li>
-                        <li class="flex items-center">
-                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                            </svg>
-                            API access
-                        </li>
-                    </ul>
-                    <button class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                        Contact Sales
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 bg-blue-600 text-white">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Inventory Management?</h2>
-            <p class="text-xl mb-8 text-blue-100">Join thousands of Shopify merchants who trust IcePossible to manage their inventory efficiently.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button onclick="goToApp()" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-                    Start Your Free Trial
-                </button>
-                <button class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                    Schedule Demo
-                </button>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-black text-gray-900 mb-8">About IcePossible</h2>
+            <p class="text-xl text-gray-600 leading-relaxed mb-8">
+                We're a streetwear brand that believes in making the impossible, possible. 
+                Our designs are inspired by urban culture, creativity, and the cool confidence 
+                that comes from expressing your unique style.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Starting with our exclusive sticker collections, we're building a community 
+                of creators, dreamers, and style mavens who aren't afraid to stand out.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">IcePossible</h3>
-                    <p class="text-gray-400">The ultimate Shopify inventory management solution for modern merchants.</p>
+                    <h3 class="text-2xl font-black ice-text mb-4">IcePossible</h3>
+                    <p class="text-gray-400">Making the impossible, possible through streetwear and style.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Product</h4>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                        <li><a href="#shop" class="hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Support</h4>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Twitter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">TikTok</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -308,11 +192,6 @@
     </footer>
 
     <script>
-        function goToApp() {
-            // You can replace this with the actual path to your product page
-            window.location.href = 'app.html';
-        }
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -325,6 +204,12 @@
                     });
                 }
             });
+        });
+
+        // Simple cart functionality (placeholder)
+        document.querySelector('button:contains("Add to Cart")') && 
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Added to cart! (This is a demo - integrate with your e-commerce platform)');
         });
     </script>
 </body>
